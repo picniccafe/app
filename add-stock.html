@@ -26,7 +26,7 @@ const form = document.getElementById("itemForm");
 form.addEventListener("submit", e => {
   e.preventDefault();
   const formData = new FormData(form);
-  formData.append("action", "addItem");
+   formData.append("action", "addStock");
 
   fetch(scriptURL, { method: "POST", body: formData })
     .then(res => res.text())
@@ -39,4 +39,5 @@ form.addEventListener("submit", e => {
   </main>
 </body>
 </html>
+
 
