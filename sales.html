@@ -9,7 +9,7 @@
 <body>
   <header><h1>Sales</h1></header>
   <main>
-    <form>
+    <form id="salesForm">
       <input type="datetime-local" required>
       <input type="text" placeholder="Item ID" required>
       <input type="number" placeholder="Quantity" required>
@@ -26,6 +26,25 @@
       <input type="text" placeholder="Reference">
       <button type="submit">Save Sale</button>
     </form>
+
+    <script>
+const scriptURL = "https://script.google.com/macros/s/AKfycby_3TWVUvJebNaWSJOkf8a-noFO-0JKnup0oOqqAJj6RgBZhR_w-sm560KMLEviSL5JsA/exec";  // paste URL here
+const form = document.getElementById("itemForm");
+
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  const formData = new FormData(form);
+  formData.append("action", "addItem");
+
+  fetch(scriptURL, { method: "POST", body: formData })
+    .then(res => res.text())
+    .then(msg => alert(msg))
+    .catch(err => console.error(err));
+});
+</script>
+
+    
   </main>
 </body>
 </html>
+
