@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header><h1>Sales</h1></header>
+  <main>
+    <form>
+      <input type="datetime-local" required>
+      <input type="text" placeholder="Item ID" required>
+      <input type="number" placeholder="Quantity" required>
+      <input type="text" placeholder="Unit">
+      <input type="number" placeholder="Unit Price" required>
+      <input type="number" placeholder="Discount">
+      <input type="number" placeholder="Total" required>
+      <select>
+        <option>Cash</option>
+        <option>Card</option>
+        <option>Online</option>
+      </select>
+      <input type="text" placeholder="Customer">
+      <input type="text" placeholder="Reference">
+      <button type="submit">Save Sale</button>
+    </form>
+  </main>
+</body>
+</html>
